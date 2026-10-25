@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athlete Nutrition</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Athlete Nutrition</h1>
+    <p>Panduan nutrisi untuk atlet pemula</p>
+    <nav>
+      <a href="#kalkulator">Kalkulator</a>
+      <a href="#grafik">Grafik</a>
+      <a href="#tips">Tips Nutrisi</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Mulai Latihan, Perhatikan Nutrisi!</h2>
+      <p>
+        Kenali pentingnya makanan seimbang, hidrasi,
+        dan pemulihan untuk mendukung aktivitas olahraga.
+      </p>
+    </section>
+
+    <section id="kalkulator" class="card">
+      <h2>Kalkulator Energi Harian</h2>
+      <p>
+        Kalkulator edukatif untuk orang dewasa usia 18 tahun
+        ke atas. Hasilnya hanya perkiraan, bukan resep makan.
+      </p>
+
+      <form id="nutritionForm">
+        <label for="age">Usia (tahun)</label>
+        <input id="age" type="number" min="1" max="120"
+          required>
+
+        <label for="sex">Kategori rumus</label>
+        <select id="sex" required>
+          <option value="male">Rumus laki-laki dewasa</option>
+          <option value="female">Rumus perempuan dewasa</option>
+        </select>
+
+        <label for="weight">Berat badan (kg)</label>
+        <input id="weight" type="number" min="1"
+          step="0.1" required>
+
+        <label for="height">Tinggi badan (cm)</label>
+        <input id="height" type="number" min="1"
+          step="0.1" required>
+
+        <label for="activity">Tingkat aktivitas</label>
+        <select id="activity">
+          <option value="1.2">Ringan</option>
+          <option value="1.375">Ringan hingga sedang</option>
+          <option value="1.55">Sedang</option>
+          <option value="1.725">Tinggi</option>
+        </select>
+
+        <button type="submit">Hitung Estimasi</button>
+      </form>
+
+      <div id="result" aria-live="polite"></div>
+    </section>
+
+    <section id="grafik" class="card">
+      <h2>Grafik Estimasi Energi</h2>
+      <p>
+        Grafik akan muncul setelah perhitungan berhasil
+        dilakukan pada pengguna dewasa.
+      </p>
+      <canvas id="energyChart"></canvas>
+    </section>
+
+    <section id="tips" class="card">
+      <h2>Tips Nutrisi Atlet Pemula</h2>
+
+      <article class="tip">
+        <h3>🍚 1. Konsumsi karbohidrat</h3>
+        <p>
+          Nasi, kentang, oat, dan roti dapat membantu
+          menyediakan energi untuk latihan.
+        </p>
+      </article>
+
+      <article class="tip">
+        <h3>🥚 2. Cukupi protein</h3>
+        <p>
+          Telur, ikan, tempe, tahu, dan daging membantu
+          proses perbaikan serta pemulihan otot.
+        </p>
+      </article>
+
+      <article class="tip">
+        <h3>🥑 3. Pilih lemak sehat</h3>
+        <p>
+          Kacang-kacangan, biji-bijian, dan alpukat
+          dapat menjadi bagian dari pola makan seimbang.
+        </p>
+      </article>
+
+      <article class="tip">
+        <h3>💧 4. Jaga hidrasi</h3>
+        <p>
+          Minum secara teratur sebelum, selama, dan setelah
+          latihan. Sesuaikan dengan durasi, cuaca,
+          dan banyaknya keringat.
+        </p>
+      </article>
+
+      <article class="tip">
+        <h3>🍱 5. Atur waktu makan</h3>
+        <p>
+          Makan sebelum latihan untuk mendukung energi
+          dan konsumsi makanan setelah latihan untuk
+          membantu pemulihan.
+        </p>
+      </article>
+    </section>
+
+    <p class="disclaimer">
+      Informasi ini bersifat edukatif. Kebutuhan nutrisi
+      setiap atlet berbeda. Atlet di bawah usia 18 tahun
+      perlu pendampingan orang tua atau tenaga gizi
+      yang kompeten untuk penilaian kebutuhan individual.
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2026 Athlete Nutrition | Edukasi Olahraga</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
